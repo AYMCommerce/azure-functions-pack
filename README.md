@@ -15,7 +15,7 @@ A javascript module bundler (webpack) is used to place all the modules in a sing
 In the Function App directory:
 
 ```
-npm install -g azure-functions-pack
+yarn global add azure-functions-pack
 funcpack pack ./
 ```
 
@@ -52,7 +52,7 @@ The `copyToOutput` option will copy all the important files for you to the `outp
 funcpack pack -c .
 cd .funcpack
 func azure functionapp publish <myapp>
-``` 
+```
 
 ### unpack
 
@@ -67,7 +67,7 @@ Usage: unpack [options] <path>
     -o, --output <path>  Path for output directory
 ```
 
-Note: the uglify feature only supports some small amount of es6, so I recommend that if you get errors either don't uglify or drop your code down to es5. 
+Note: the uglify feature only supports some small amount of es6, so I recommend that if you get errors either don't uglify or drop your code down to es5.
 
 Uglify will minimize the sample project that's included from 27 MB to 9 MB.
 

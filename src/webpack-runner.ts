@@ -43,6 +43,15 @@ export class WebpackRunner {
             let config: webpack.Configuration = {
                 entry: packHostPath,
                 externals: ignoredModules,
+                module: {
+                  rules: [
+                    {
+                      exclude: /node_modules/,
+                      loader: "babel-loader",
+                      test: /\.js$/,
+                    },
+                  ],
+                },
                 node: {
                     __dirname: false,
                     __filename: false,
